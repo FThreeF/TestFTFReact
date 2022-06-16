@@ -1,30 +1,25 @@
-import { useState } from 'react';
+import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
+import Chat from './Components/Chat/Chat';
+import History from './Components/Content/HistoryGame/History';
+import Header from './Components/Header/Header';
+import NavBar from './Components/NavBar/NavBar';
 
-
-
-function App() {
-  const [count, setCount] = useState(0);
-
-
-
-
-  const Increment = () => {
-    console.log("Increment");
-    setCount(count + 1);
-  }
-
-  const Decrement = () => {
-    console.log("Decrement");
-    setCount(count - 1);
-  }
-
+const App = () => {
   return (
-    <div className="App">
-      <h1>{count}</h1>
-      <button onClick={Increment}>Click Increment</button>
-      <button onClick={Decrement}>Click Decrement</button>
-    </div>
+    <BrowserRouter>
+      <div className='wrapper'>
+        <Header />
+        <NavBar />
+        <div className='Content'>
+          <Routes>
+            <Route path='/History' element={<History />}/>
+            <Route path='/Chat' element={<Chat />}/>
+          </Routes>
+        </div>
+      </div>
+    </BrowserRouter>
   );
 }
 

@@ -1,0 +1,38 @@
+@font-face {
+    font-family: "MainFonts";
+    src: url('./Resources/Fonts/MainFonts.ttf');
+    font-style: normal;
+    font-weight: 900;
+}
+
+
+html, body {
+    height: 100%;
+    
+}
+body {
+    color: white;
+    text-shadow: 1px 1px black, 1px -1px black, -1px 1px black, -1px -1px black;
+    font-family: MainFonts;
+    user-select: none;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.Content {
+    background-color: #404040;
+    width: 100%;
+    /* height: 500px; */
+    display: flex;
+    justify-content: center;
+    flex: 1 1 auto;
+}
+
